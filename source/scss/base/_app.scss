@@ -5,6 +5,18 @@ $grey-border: #eee;
 $grey-text: #aaa;
 $black: #000;
 $white: #fff;
+$red: #ff0000;
+
+$color-vacation: red;
+$color-parentalLeave: blue;
+$color-conference: orange;
+$color-clientTravel: yellow;
+$color-class: pink;
+$color-recognitionDay: green;
+$color-juryDuty: purple;
+$color-holiday: aliceblue;
+$color-leave: indigo;
+$color-bereavement: brown;
 
 html {
   font-size: 10px;
@@ -62,15 +74,6 @@ h3 {
   font-size: 1.7rem;
 }
 
-button {
-  background: transparent;
-  border-radius: 1.6rem;
-  border: 0.1rem solid $black;
-  cursor: pointer;
-  font-size: 1.5rem;
-  padding: 0.7rem 2rem;
-}
-
 button:disabled {
   opacity: 0.3;
 }
@@ -89,8 +92,9 @@ button:hover {
   max-width: 60rem;
 
   @include lg {
+    border: 0;
     margin-left: 20rem;
-    margin: 0 0 2rem 20rem;
+    margin: 0 0 0 20rem;
     padding-bottom: 0;
   }
 }
@@ -114,35 +118,8 @@ button:hover {
   }
 }
 
-.Menu-links {
-  @include md {
-  }
-}
-
-.Menu-link {
-  display: inline-block;
-  font-family: $font-family-serif;
-  font-style: italic;
-  margin-left: 1.5rem;
-  line-height: 3rem;
-  text-decoration: none;
-
-  @include md {
-    margin-left: 3rem;
-  }
-
-  @include lg {
-    margin: 0 3rem 0 0;
-    line-height: 7.5rem;
-  }
-}
-
-.Menu-link--active {
-  color: $black;
-}
-
 .Page {
-  max-width: 60rem;
+  // max-width: 60rem;
   margin: 0 auto;
 
   @include lg {

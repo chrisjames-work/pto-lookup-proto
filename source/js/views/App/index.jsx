@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Dashboard from 'views/Dashboard';
-import About from 'views/About';
 import NotFound from 'views/NotFound';
 import Menu from 'components/Global/Menu';
+
+import * as actions from 'actions/app';
 
 const publicPath = '/';
 
 export const routeCodes = {
   DASHBOARD: publicPath,
-  ABOUT: `${ publicPath }about`,
 };
 
+@connect()
 export default class App extends Component {
   static propTypes = {
-    children: PropTypes.object,
+    dispatch: PropTypes.func,
+  }
+
+  componentWillMount() {
+    const { dispatch } = this.props;
+
+    dispatch(actions.initApp());
   }
 
   render() {
@@ -27,7 +35,6 @@ export default class App extends Component {
           <div className='Page'>
             <Switch>
               <Route exact path={ publicPath } component={ Dashboard } />
-              <Route path={ routeCodes.ABOUT } component={ About } />
               <Route path='*' component={ NotFound } />
             </Switch>
           </div>

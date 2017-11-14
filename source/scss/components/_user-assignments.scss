@@ -1,0 +1,88 @@
+.UserAssignments {
+  font-size: 16px;
+}
+
+.UserAssignments-daysInput {
+  display: inline-block;
+  margin: 0 3px;
+  width: 40px;
+}
+
+.UserAssignments-table {
+  border-collapse: collapse;
+
+  th {
+    font-weight: normal;
+    padding: 4px 0 8px;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid $grey-border;
+    border-left: 1px solid $grey-border;
+    height: 32px;
+    width: 48px;
+
+    &.is-weekend {
+      background-color: $grey-border;
+      width: 4px;
+    }
+
+    &.is-vacation { background-color: $color-vacation; }
+    &.is-parentalleave { background-color: $color-parentalLeave; }
+    &.is-conference { background-color: $color-conference; }
+    &.is-clienttravel { background-color: $color-clientTravel; }
+    &.is-class { background-color: $color-class; }
+    &.is-recognitionday { background-color: $color-recognitionDay; }
+    &.is-juryduty { background-color: $color-juryDuty; }
+    &.is-holiday { background-color: $color-holiday; }
+    &.is-leave { background-color: $color-leave; }
+    &.is-bereavement { background-color: $color-bereavement; }
+  }
+
+  th:first-child,
+  td:first-child {
+    border-left: 0;
+    padding-right: 20px;
+    width: 200px;
+  }
+}
+
+.UserAssignments-day {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.UserAssignments-date {
+  line-height: 20px;
+}
+
+.UserAssignments-key {
+  display: flex;
+  flex-wrap: wrap;
+  width: 248px;
+
+  dt {
+    flex-basis: calc(100% - 48px);
+    margin-bottom: 1px;
+    padding: 0;
+  }
+
+  dd {
+    flex-basis: 48px;
+    height: 32px;
+    margin: 0 0 1px;
+    padding: 0;
+
+    &.is-vacation { background-color: $color-vacation; }
+    &.is-parentalleave { background-color: $color-parentalLeave; }
+    &.is-conference { background-color: $color-conference; }
+    &.is-clienttravel { background-color: $color-clientTravel; }
+    &.is-class { background-color: $color-class; }
+    &.is-recognitionday { background-color: $color-recognitionDay; }
+    &.is-juryduty { background-color: $color-juryDuty; }
+    &.is-holiday { background-color: $color-holiday; }
+    &.is-leave { background-color: $color-leave; }
+    &.is-bereavement { background-color: $color-bereavement; }
+  }
+}

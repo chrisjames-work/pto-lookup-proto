@@ -48,7 +48,6 @@ if (isProduction) {
   );
 }
 
-
 // Render it to DOM
 ReactDOM.render(
   <Provider store={ store }>
